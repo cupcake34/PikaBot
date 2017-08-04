@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 const settings = require('../config.json');
 exports.run = (client, message, args) => {
   if (!args[0]) {
@@ -5,9 +6,10 @@ exports.run = (client, message, args) => {
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
     
     /* new code starts here, delete this part if not works, try embedding if works */
-    message.author.send(`**All Modules Command List**\n*Use ${settings.prefix}help <commandname> for details on a specific command.*\n\`\`\`\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}\n\`\`\``);
-    message.reply("Check your direct message");
-    /* new code ends here */
+    const embed = new Discord.RichEmbed()
+    .setColor(4447003).setAuthor(client.user.username, client.user.avatarURL).setTitle("List Of Commands").setDescription(`${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`).setFooter(`Use ${settings.prefix}help <commandname> for details on a specific command.`);
+    message.author.send({embed});
+    message.reply("Check your Direct Message!");/* new code ends here */
   } else {
     let command = args[0];
     if (client.commands.has(command)) {
