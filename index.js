@@ -48,9 +48,9 @@ client.reload = command => {
 /* Function needs testing */
 client.elevation = message => {
   let permlvl = 0;
-  if (message.member.roles.has("MANAGE_MESSAGES") permlvl = 1;
-  if (message.member.roles.has("MANAGE_SERVER")) permlvl = 2;
-  if (message.member.roles.has("ADMINISTRATION")) permlvl = 3; 
+  if (message.member.hasPermission("MANAGE_MESSAGES")) permlvl = 1;
+  if (message.member.hasPermission("MANAGE_SERVER")) permlvl = 2;
+  if (message.member.hasPermission("ADMINISTRATION")) permlvl = 3; 
   if (message.author.id === config.botOwner) permlvl = 4; 
   return permlvl;
 };
