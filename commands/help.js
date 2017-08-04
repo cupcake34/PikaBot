@@ -7,7 +7,11 @@ exports.run = (client, message, args) => {
     
     /* new code starts here, delete this part if not works, replace with original if not works */
     const embed = new Discord.RichEmbed()
-    .setColor(4447003).setAuthor(client.user.username, client.user.avatarURL).setTitle("List Of Commands").setDescription(`${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`).setFooter(`Use ${settings.prefix}help <commandname> for details on a specific command.`);
+    .setColor(4447003)
+    .setAuthor(client.user.username, client.user.avatarURL)
+    .setTitle("List Of Commands")
+    .setDescription(`\`\`\`${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} - ${c.help.description}).join('\n')}\`\`\``)
+    .setFooter(`Use ${settings.prefix}help <commandname> for details on a specific command.`);
     message.author.send({embed});
     message.reply("Check your Direct Message!");
     /* new code ends here */
@@ -17,7 +21,7 @@ exports.run = (client, message, args) => {
       command = client.commands.get(command);
       const cmdhelp = new Discord.RichEmbed()
       .setColor(4447003)
-      .setTitle(`${command.help.name}${command.help.alias}`)
+      .setTitle(`${command.help.name} ${command.help.alias}`)
       .setDescription(`${command.help.description}\n_${command.help.permit}_`)
       .addField(`Usage`, `${settings.prefix}${command.help.usage}\n**Module: ${command.help.module}**`)
       .setFooter(`Use ${settings.prefix}help to get a full list of commands.`)
@@ -70,7 +74,7 @@ aliases: ['h', 'help'],
 
 example ends here */
 
-/* perm levels
+/* perm levels (incomplete)
 0 = ???
 1 = Requires Manage_Messages
 2 = Requires Manage_Server
