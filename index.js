@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
+const chalk = require("chalk");
+const moment = require("moment");
 const config = require("./config.json");
 
 require("./util/eventLoader.js")(client);
