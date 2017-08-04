@@ -5,7 +5,7 @@ module.exports = message => {
   if (message.content.toLowerCase().includes("lol")) {
   message.channel.send("**:joy: :joy: LAUGH OUT LOUD :joy: :joy:**").then(msg => msg.delete(7000));
   }else
-  if (message.content.toLowerCase().includes("xd" || "rofl" || "lmao" || "rofl" || "lmfao") {
+  if (message.content.toLowerCase().includes("xd" || "rofl" || "lmao" || "rofl" || "lmfao")) {
   message.channel.send(":joy: :joy: :joy: :joy: :joy: :joy:").then(msg => msg.delete(5000));
   }else
   if (!message.content.startsWith(settings.prefix)) return;
