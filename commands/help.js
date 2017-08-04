@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
     .setColor(4447003)
     .setAuthor(client.user.username, client.user.avatarURL)
     .setTitle("List Of Commands")
-    .setDescription(`\`\`\`${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} - ${c.help.description}).join('\n')}\`\`\``)
+    .setDescription(`\`\`\`${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} - ${c.help.description})}.join('\n')}\`\`\``)
     .setFooter(`Use ${settings.prefix}help <commandname> for details on a specific command.`);
     message.author.send({embed});
     message.reply("Check your Direct Message!");
