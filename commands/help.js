@@ -5,16 +5,23 @@ exports.run = (client, message, args) => {
     const commandNames = Array.from(client.commands.keys());
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
     
-    /* new code starts here, delete this part if not works, try embedding if works */
+    /* new code starts here, delete this part if not works, replace with original if not works */
     const embed = new Discord.RichEmbed()
     .setColor(4447003).setAuthor(client.user.username, client.user.avatarURL).setTitle("List Of Commands").setDescription(`${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`).setFooter(`Use ${settings.prefix}help <commandname> for details on a specific command.`);
     message.author.send({embed});
-    message.reply("Check your Direct Message!");/* new code ends here */
+    message.reply("Check your Direct Message!");
+    /* new code ends here */
   } else {
     let command = args[0];
     if (client.commands.has(command)) {
       command = client.commands.get(command);
-      message.channel.send(`**${command.help.name}${command.help.alias}**\n\n**Info**\n${command.help.description}\n\n**Usage**\n${command.help.usage}\n_${command.help.permit}_\n\n**Module: ${command.help.module}**`);
+      const cmdhelp = new Discord.RichEmbed()
+      .setColor(4447003)
+      .setTitle(`${command.help.name}${command.help.aliad}`)
+      .setDescription(`${command.help.description}\n_${command.help.permit}`)
+      .addField(`Usage`, `${settings.prefix}${command.help.usage}\n**Module: ${command.help.module}**`)
+      .setFooter(`Use ${settings.prefix}help to get a full list of commands.`)
+      message.channel.send({embed: cmdhelp});
     }
   }
 };
