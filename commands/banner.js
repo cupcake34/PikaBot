@@ -15,6 +15,7 @@ exports.run = (client, message, args) => {
   }
   else if (style === "4") {
   return data;
+  }
   else {
   return msg;
   }
