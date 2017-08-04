@@ -1,19 +1,19 @@
-const snekfetch = require("snekfetch");
-/* Testing needes */
+/* Testing needed */
 exports.run = (client, message, args) => {
-  const guild = message.guild;
-  const channel = message.channel;
   const msg = message.reply("Invalid Number Specified\nYou can select between 1-4 only.");
-  if (guild.icon === null) return message.reply("Please set a icon for server before using this command.");
-  if (args[0].toNumber() > 4) return msg;
-  if (args[0].toNunber() < 1) return msg;
-  channel.send({file: `https://discordapp.com/api/guilds/${guild.id}/embed.png?style=banner${args[0]}`});
+  const data = message.channel.send({files: [`https://discordapp.com/api/guilds/${message.guild.id}/embed.png?style=banner${args[0]}`]});
+  if (message.guild.icon === null) return message.reply("Please set a icon for server before using this command.");
+  if (args[0] === "1") return data;
+  else if (args[0] === "2") return data;
+  else if (args[0] === "3") return data;
+  else if (args[0] === "4") return data;
+  else return msg;
 }
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
-  aliases: [],
+  guildOnly: true,
+  aliases: ['logo'],
   permLevel: 0
 };
 
@@ -23,5 +23,5 @@ exports.help = {
   usage: 'banner [number]',
   module: 'Other',
   permit: ' ',
-  alias: ' '
+  alias: '/ logo'
 };
