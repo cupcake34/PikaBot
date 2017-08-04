@@ -4,11 +4,20 @@ exports.run = (client, message, args) => {
   const msg = message.reply("Invalid Number Specified\nYou can select between 1-4 only.");
   const data = message.channel.send({files: [`https://discordapp.com/api/guilds/${message.guild.id}/embed.png?style=banner${style}`]});
   if (guild.icon === null) return message.reply("Please set a icon for server before using this command.");
-  if (style === "1") return data;
-  else if (style === "2") return data;
-  else if (style === "3") return data;
-  else if (style === "4") return data;
-  else return msg;
+  if (style === "1"){
+  return data;
+  }
+  else if (style === "2") {
+  return data;
+  }
+  else if (style === "3") {
+  return data;
+  }
+  else if (style === "4") {
+  return data;
+  else {
+  return msg;
+  }
 }
 
 exports.conf = {
