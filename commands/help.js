@@ -21,10 +21,9 @@ exports.run = (client, message, args) => {
       command = client.commands.get(command);
       const cmdhelp = new Discord.RichEmbed()
       .setColor(4447003)
-      .setTitle(`${command.help.name} ${command.help.alias}`)
-      .setDescription(`${command.help.description}\n_${command.help.permit}_`)
-      .addField(`Usage`, `${settings.prefix}${command.help.usage}\n**Module: ${command.help.module}**`)
-      .setFooter(`Use ${settings.prefix}help to get a full list of commands.`)
+      .setDescription(`\`${command.help.name} ${command.help.alias}\`\n${command.help.description}\n**${command.help.permit}**`)
+      .addField(`Usage`, `\`${settings.prefix}${command.help.usage}\``)
+      .setFooter(`Module: ${command.help.module}`)
       message.channel.send({embed: cmdhelp});
     }
   }
