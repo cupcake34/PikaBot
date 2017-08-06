@@ -20,5 +20,5 @@ exports.help = {
   usage: 'leave [servername]',
   module: 'Admin',
   permit: 'Bot Owner Only',
-  alias: 'leave'
+  alias: ' '
 };
