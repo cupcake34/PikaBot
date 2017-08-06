@@ -29,7 +29,7 @@ return;
 
 exports.conf = {
   enabled: true,
-  guildOnly: true,
+  guildOnly: false,
   aliases: ['clr', 'prune'],
   permLevel: 1
 };
