@@ -1,5 +1,11 @@
 exports.run = (client, message, args) => {
 const config = require ('../config.json');
+const Discord = require("discord.js");
+const bot = client.user;
+const guild = message.guild;
+const channel = message.channel;
+const msg = message.content;
+const author = message.author;
 if(message.author.id !== config.botOwner) return message.reply ('you are not my owner!');
 const clean = text => {
 if (typeof(text) === "string") {
