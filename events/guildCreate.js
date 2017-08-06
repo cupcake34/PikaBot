@@ -1,5 +1,5 @@
 const config = require('../config.json');
-module.exports = guild => {
+module.exports = (guild, client) => {
 client.users.get(config.botOwner).send(`Someone invited me in ${guild.name}, I will do my best there :smiley:`);
 guild.defaultChannel.send({embed: { 
 color:3447003,
