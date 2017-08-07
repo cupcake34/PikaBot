@@ -4,7 +4,7 @@ let newavatartime = message.content.split(" ").slice(1);
 let blasty = newavatartime.join(" ");
 if(message.author.id !== config.botOwner) return message.reply('you are not my owner!!!');
 if(!blasty.startsWith('http')){
-message.reply(`New Avatar Set : ./images/${blasty}.png`);
+message.reply(`New Avatar Set : ./images/avatar/${blasty}.png`);
 client.user.setAvatar(`./images/${blasty}.png`);
 }else {
 message.reply(`New Avatar Set : ${blasty}`);
