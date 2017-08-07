@@ -26,5 +26,5 @@ exports.help = {
   usage: 'setavatar [url or filename]',
   module: 'Admin',
   permit: 'Bot Owner Only',
-  alias: 'setav'
+  alias: '/ setav'
 };
