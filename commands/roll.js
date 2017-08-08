@@ -1,5 +1,6 @@
 exports.run = (client, message, args) => {
-message.reply('You rolled :game_die:' + Math.floor(Math.random() * ${args[0]})).then(m=>m.react('🎲'));
+let num = message.content.split(" ").slice(1).join(" ");
+message.reply('You rolled :game_die:' + Math.floor(Math.random() * num)).then(m=>m.react('🎲'));
 };
 
 exports.conf = {
