@@ -15,7 +15,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['setplay'],
-  permLevel: 0
+  permLevel: 4
 };
 
 exports.help = {
