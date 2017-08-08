@@ -1,6 +1,7 @@
 exports.run = (client, message, args) => {
 const config = require("../config.json");
 const guild = message.guild;
+const Discord = require("discord.js");
 const embed = new Discord.RichEmbed()
 .setColor(3447003)
 .setAuthor(guild.name, guild.iconURL)
