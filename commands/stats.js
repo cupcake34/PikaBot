@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setAuthor(`${bot.username} v1.1`, bot.avatarURL)
     .setColor(0x00AE86)
-    .setFooter('Type $servers to get a full list of servers the bot is in.'
+    .setFooter(`Type ${config.prefix}servers to get a full list of servers the bot is in.`)
     .setThumbnail(bot.avatarURL)
     .setDescription(`A Discord.js Bot for Fun, Mod, Pokemon and Misc Commands\n__Devloped by ${clientOwner.tag}__`)
     .addField("Client ID", bot.id)
@@ -18,8 +18,7 @@ exports.run = (client, message, args) => {
     .addField("Presence", `${client.guilds.size} Servers\n${client.channels.size} Channels\n${client.users.size} Users`)
     .addField("Uptime", duration)
     .addField("Memory Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
-    .addField("DiscordJs", "v" + Discord.version)
-    .addField("NodeJs", process.version);
+    .addField("Statistics", `DiscordJs v${Discord.version}\nNodeJs ${process.version}`);
   message.channel.send({embed});
 };
 
