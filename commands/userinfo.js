@@ -5,8 +5,8 @@ if (message.mentions.users.first() !== undefined) {
 mention = message.mentions.users.first();
 target = message.mentions.members.first());
 }else {
-mention=message.author;
-target=message.member;
+mention = message.author;
+target = message.member;
 }
 
 const Discord = require("discord.js");
