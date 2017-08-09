@@ -3,7 +3,7 @@ var mention;
 var target;
 if (message.mentions.users.first() !== undefined) {
 mention = message.mentions.users.first();
-target = message.mentions.members.first());
+target = message.mentions.members.first();
 }else {
 mention = message.author;
 target = message.member;
