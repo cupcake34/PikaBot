@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "PikaBot",
+  "version": "1.0.1",
+  "description": "A Discord Bot written in Discord.js",
   "engines": {
     "node": "6.10.2"
   },
