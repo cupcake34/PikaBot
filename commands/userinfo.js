@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
-const mention;
-const target;
+var mention;
+var target;
 if (message.mentions.users.first() !== undefined) {
 mention = message.mentions.users.first();
 target = message.mentions.members.first());
