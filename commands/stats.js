@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
     .addField("Presence", `${client.guilds.size} Servers\n${client.channels.size} Channels\n${client.users.size} Users`)
     .addField("Uptime", duration)
     .addField("Memory Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
-    .addField("Statistics", `Discord.js: v${Discord.version}\nNodeJs: ${process.version}`);
+    .addField("Statistics", `Discord.js: v${Discord.version}\nNodeJs: ${process.version}`)
   message.channel.send({embed});
 };
 
