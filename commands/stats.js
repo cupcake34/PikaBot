@@ -1,0 +1,39 @@
+const Discord = require("discord.js");
+const config = require("../config.json");
+const moment = require("moment");
+require("moment-duration-format");
+
+exports.run = (client, message, args) => {
+  const bot = client.user;
+  const clientOwner = client.users.get(botOwner)
+  const duration = moment.duration(client.uptime).format(" D [days], H [hrs], M [mins], S [secs]");
+  const embed = new Discord.RichEmbed()
+    .setAuthor(`${bot.username} v1.1`, bot.avatarURL)
+    .setColor(0x00AE86)
+    .setFooter('Type $servers to get a full list of servers the bot is in.'
+    .setThumbnail(bot.avatarURL)
+    .setDescription(`A Discord.js Bot for Fun, Mod, Pokemon and Misc Commands\n__Devloped by ${clientOwner.tag}__`)
+    .addField("Client ID", bot.id)
+    .addField("Bot Owner ID(s)", botOwner)
+    .addField("Presence", `${client.guilds.size} Servers\n${client.channels.size} Channels\n${client.users.size} Users`)
+    .addField("Uptime", duration)
+    .addField("Memory Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`)
+    .addField("Statistics", `Discord.js: v${Discord.version}\nNodeJs: ${process.version}`);
+  message.channel.send({embed});
+};
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['binfo', 'botinfo'],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'stats',
+  description: 'Shows info on bot.',
+  usage: 'stats',
+  module: 'Other',
+  permit: ' ',
+  alias: '/ binfo / botinfo'
+};
