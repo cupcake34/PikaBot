@@ -5,7 +5,8 @@ require("moment-duration-format");
 
 exports.run = (client, message, args) => {
   const bot = client.user;
-  const clientOwner = client.users.get(botOwner)
+  const clientOwner = client.users.get(botOwner);
+  const botOwner = config.botOwner;
   const duration = moment.duration(client.uptime).format(" D [days], H [hrs], M [mins], S [secs]");
   const embed = new Discord.RichEmbed()
     .setAuthor(`${bot.username} v1.1`, bot.avatarURL)
