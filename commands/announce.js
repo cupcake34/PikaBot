@@ -1,6 +1,6 @@
 const config = require('../config.json');
 exports.run = (client, message, args) => {
-if(message.author.id !== config.botownerid) return message.reply('you are not my owner!!!'); 
+if(message.author.id !== config.botOwner) return message.reply('you are not my owner!!!'); 
 let announcemsg = message.content.split(" ").slice(1).join(' ');
 client.guilds.forEach(guild => {
 guild.defaultChannel.send({embed: {
