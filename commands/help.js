@@ -6,13 +6,10 @@ exports.run = (client, message, args) => {
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
     
     /* new code starts here, delete this part if not works, replace with original if not works */
-    const embed = new Discord.RichEmbed()
-    .setColor(4447003)
-    .setAuthor(client.user.username, client.user.avatarURL)
-    .setTitle("List Of Commands")
-    .setDescription(`\`\`\`\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}\n\`\`\``)
-    .setFooter(`Use ${settings.prefix}help <commandname> for details on a specific command.`);
-    message.author.send({embed});
+    message.author.send(`**Command List**\n\n\`\`\`\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}\n\`\`\``);
+    message.author.send({embed: {
+      color:4447003,
+      description:`Use ${settings.prefix}help <commandname> for details on a specific command.`}});
     message.reply("Check your Direct Message!");
     /* new code ends here */
   } else {
