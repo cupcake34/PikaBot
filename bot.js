@@ -2,6 +2,7 @@ const settings = require("./config.json")
 module.exports = message => {
   let client = message.client;
   if (message.author.bot) return;
+  if (message.channel.type === "dm") return message.reply("Commands are not usable in DM.");
   if (message.content.toLowerCase().includes("lol")) {
   message.channel.send("**:joy: :joy: LAUGH OUT LOUD :joy: :joy:**").then(msg => msg.delete(7000));
   }else
