@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setAuthor(bot.username, bot.avatarURL)
     .setThumbnail(bot.avatarURL)
-    .setDescription(`If you want me in your server, [click here](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=318700956244115457)!\n\nIf you want to get latest updates join my [Discord Server](https://discord.gg/wTeksG).\n\nI am also on... nothing for now!`);
+    .setDescription(`If you want me in your server, [click here](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=${bot.id})!\n\nIf you want to get latest updates join my [Discord Server](https://discord.gg/wTeksG).\n\nI am also on...\n[bots.discord.pw](https://bots.discord.pw/bots/${bot.id})\n[discordbots.org]()\n[discordlist.me]()`);
     message.channel.send({embed});
 };
 
