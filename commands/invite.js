@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setAuthor(bot.username, bot.avatarURL)
     .setThumbnail(bot.avatarURL)
-    .setDescription(`If you want me in your server, [click here](invite)!\n\nIf you want to get latest updates join my [Discord Server](server).\n\nI am also on...`
+    .setDescription(`If you want me in your server, [click here](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=318700956244115457)!\n\nIf you want to get latest updates join my [Discord Server](https://discord.gg/wTeksG).\n\nI am also on... nothing for now!`
 };
 
 exports.conf = {
