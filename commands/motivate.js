@@ -84,6 +84,6 @@ exports.help = {
   description: 'Sends a motivational message.',
   usage: 'motivate',
   module: 'Other',
-  permit: ' '
+  permit: ' ',
   alias: ' '
 };
