@@ -22,6 +22,6 @@ exports.help = {
   description: 'List all bot modules.',
   usage: 'modules',
   module: 'Help',
-  permit: ' '
+  permit: ' ',
   alias: '/ mdls'
 };
