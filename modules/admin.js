@@ -1,3 +1,3 @@
 exports.moduledata = {
-  "name": "Admin",
+  "name": "Admin"
 }
