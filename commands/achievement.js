@@ -22,7 +22,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'achievment',
+  name: 'achievement',
   description: 'Get an achievement of something.',
   usage: 'achievment [title] | [content]',
   module: 'Fun',
