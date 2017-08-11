@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
       command = client.commands.get(command);
     }else if (client.aliases.has(command)) {
       command = client.aliases.get(command);
-    }
+    };
       const cmdhelp = new Discord.RichEmbed()
       .setColor(4447003)
       .setDescription(`\`${settings.prefix}${command.help.name} ${command.help.alias}\`\n${command.help.description}\n**${command.help.permit}**`)
@@ -26,7 +26,6 @@ exports.run = (client, message, args) => {
       .setFooter(`Module: ${command.help.module}`)
       message.channel.send({embed: cmdhelp});
     }
-  }
 };
 
 exports.conf = {
