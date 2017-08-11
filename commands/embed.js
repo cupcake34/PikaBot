@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
     const num = Math.floor(Math.random()*color.length);
     const embed = new Discord.RichEmbed()
     .setDescription(msg)
-    .setColor(colour[num]);
+    .setColor(color[num]);
     message.delete(1);
     return message.channel.send({embed});
 
