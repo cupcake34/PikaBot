@@ -14,16 +14,16 @@ exports.run = (client, message, args) => {
   message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Admin").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
   if (args[0].toLowerCase() === "fun") {
-  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Fun").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  message.channel.send(`**List Of Commands in Fun Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Fun").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
   if (args[0].toLowerCase() === "other") {
-  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Other").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  message.channel.send(`**List Of Commands in Other Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Other").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
   if (args[0].toLowerCase() === "pokemon") {
-  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Pokemon").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  message.channel.send(`**List Of Commands in Pokemon Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Pokemon").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
   if (args[0].toLowerCase() === "help") {
-  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Help").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  message.channel.send(`**List Of Commands in Help Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Help").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else {
   message.channel.send("Module not found, make sure that spellings are correct.");
   }
