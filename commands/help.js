@@ -38,8 +38,8 @@ exports.conf = {
 
 exports.help = {
   name: 'help',
-  description: 'Displays all the available commands.',
-  usage: 'help [command]',
+  description: 'Displays all the available commands or info on a certain command.',
+  usage: 'help or help [command]',
   module: 'Help',
   permit: ' ',
   alias: '/ h'
