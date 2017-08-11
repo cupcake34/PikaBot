@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
   const module = args[0];
   message.channel.send(`**List Of Commands in ${module}**\n\`\`\`${client.commands.filter(c => c.help.module === module).map(cmd => {
     `${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`
-  })}\n\`\`\``);
+  }).join("\n")}\n\`\`\``);
   message.channel.send({embed: {
     color:4447003,
     description:`Type \`${config.prefix}h <CommandName>\` for help on a spefified command. Eg. \`${config.prefix}h achievement\``
