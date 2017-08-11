@@ -2,13 +2,31 @@ const Discord = require('discord.js');
 const config = require('../config.json');
 
 exports.run = (client, message, args) => {
-  const commandNames = Array.from(client.commands.keys());   
-  const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Admin").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   message.channel.send({embed: {
     color:4447003,
     description:`Type \`${config.prefix}h <CommandName>\` for help on a spefified command. Eg. \`${config.prefix}h achievement\``
   }});
+  const commandNames = Array.from(client.commands.keys());   
+  const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
+  
+  /* main code */
+  if (args[0].toLowerCase() === "admin") {
+  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Admin").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  }else
+  if (args[0].toLowerCase() === "fun") {
+  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Fun").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  }else
+  if (args[0].toLowerCase() === "other") {
+  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Other").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  }else
+  if (args[0].toLowerCase() === "pokemon") {
+  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Pokemon").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  }else
+  if (args[0].toLowerCase() === "help") {
+  message.channel.send(`**List Of Commands in Admin Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Help").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  }else {
+  message.channel.send("Module not found, make sure that spellings are correct.");
+  }
 };
 
 exports.conf = {
