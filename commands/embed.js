@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
     let msg = message.content.split(" ").slice(1).join(" ");
-    const colour = [];
+    const color = [];
     const num = Math.floor(Math.random()*color.length);
     const embed = new Discord.RichEmbed()
     .setDescription(msg)
