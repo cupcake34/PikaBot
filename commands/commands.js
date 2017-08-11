@@ -5,8 +5,8 @@ exports.run = (client, message, args) => {
   const commandNames = Array.from(client.commands.keys());   
   const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
   const module = args[0];
-  message.channel.send(`**List Of Commands in ${module}**\n\`\`\`${client.commands.filter(c => c.help.module === module).map(cmd => {
-    `${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`
+  message.channel.send(`**List Of Commands in ${module} Module**\n\`\`\`${client.commands.filter(c => c.help.module === module).map(cmd => {
+    `${config.prefix}${cmd.help.name}`
   }).join("\n")}\n\`\`\``);
   message.channel.send({embed: {
     color:4447003,
