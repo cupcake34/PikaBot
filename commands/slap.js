@@ -18,7 +18,7 @@ exports.conf = {
 exports.help = {
   name: 'slap',
   description: 'Slaps someone for fun.',
-  usage: 'slap [mention]'
+  usage: 'slap [mention]',
   module: 'Fun',
   permit: ' ',
   alias: ' '
