@@ -18,7 +18,7 @@ exports.conf = {
 exports.help = {
   name: 'punch',
   description: 'Punches someone for fun.',
-  usage: 'punch [mention]'
+  usage: 'punch [mention]',
   module: 'Fun',
   permit: ' ',
   alias: ' '
