@@ -9,9 +9,6 @@ exports.run = (client, message, args) => {
   const draw = "it's a draw";
   const won = "you won";
   const loss = "you lost";
-  if (choice === "paper") {
-    if (choice === "rock") {
-      if (choice === "scissor") {
   var result;
   if (choice === mychoice.toLowerCase()) {
   result = draw;
@@ -27,14 +24,13 @@ exports.run = (client, message, args) => {
   result = won;
   }else if (choice === "paper" && mychoice === "Scissor") {
   result = loss;
-  }
+  }else {
+  result = "... nothing idiot :angry: ${args[0]} is not a thing in Rock/Paper/Scissors!!!";
   const embed = new Discord.RichEmbed()
-    .setColor([3447003, 4447003, 5447003][random])
+    .setColor([3447003, 4447003, 9447003][random])
     .setDescription(`I picked ${mychoice}. And your choice was ${args[0]} :thinking:\nSo ${result}!`);
   return message.channel.send({embed});
-        };
-      };
-    };
+        
 };
 
 exports.conf = {
