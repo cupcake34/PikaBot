@@ -21,7 +21,7 @@ exports.conf = {
 
 exports.help = {
   name: '8ball',
-  description: 'Asks a yes/no question.',
+  description: 'Ask 8ball a yes/no question.',
   usage: '8ball [question]',
   module: 'Fun',
   permit: ' ',
