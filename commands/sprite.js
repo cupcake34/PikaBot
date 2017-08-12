@@ -1,3 +1,4 @@
+const config = require("../config.json");
 exports.run = (client, message, args) => { 
 
 let sprite = message.content.toLowerCase().split(' ').slice(2);
@@ -74,7 +75,7 @@ message.channel.send({file: `http://www.pokestadium.com/sprites/yellow/${sprite}
 if(args[0] === "y_gray"){
 message.channel.send({file: `http://www.pokestadium.com/sprites/yellow/gray/${sprite}.png`});
 }else {
-message.reply('Game not found, you can get a list of game codes by typing `>sprite games`!');
+message.reply('Game not found, you can get a list of game codes by typing `' + config.prefix + 'sprite games`!');
 }
 
 }
