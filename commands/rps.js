@@ -9,6 +9,7 @@ exports.run = (client, message, args) => {
   const draw = "it's a draw";
   const won = "you won";
   const loss = "you lost";
+  if (choice !== "paper" || choice !== "rock" || choice !== "scissor") return message.reply(`Invalid Choice, you are playing **Rock/Paper/Scissors** not ${args[0]}!!!`);
   var result;
   if (choice === mychoice.toLowerCase()) {
   result = draw;
