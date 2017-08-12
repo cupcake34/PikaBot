@@ -87,7 +87,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'pokemon',
+  name: 'sprite',
   description: 'Sends the Pokemon\'s sprite from specified game code.',
   usage: 'sprite [gamecode] [pokemon name]',
   module: 'Pokemon',
