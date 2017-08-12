@@ -1,3 +1,3 @@
 exports.moduledata = {
-  "name": "Other"
+  "name": "Utility"
 }
