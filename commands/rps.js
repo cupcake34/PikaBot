@@ -9,7 +9,9 @@ exports.run = (client, message, args) => {
   const draw = "it's a draw";
   const won = "you won";
   const loss = "you lost";
-  if (choice !== "paper" || choice !== "rock" || choice !== "scissor") return message.reply(`Invalid Choice, you are playing **Rock/Paper/Scissors** not ${args[0]}!!!`);
+  if (choice === "paper") {
+    if (choice === "rock") {
+      if (choice === "scissor") {
   var result;
   if (choice === mychoice.toLowerCase()) {
   result = draw;
@@ -30,6 +32,9 @@ exports.run = (client, message, args) => {
     .setColor([3447003, 4447003, 5447003][random])
     .setDescription(`I picked ${mychoice}. And your choice was ${args[0]} :thinking:\nSo ${result}!`);
   return message.channel.send({embed});
+        };
+      };
+    };
 };
 
 exports.conf = {
