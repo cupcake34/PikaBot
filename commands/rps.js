@@ -40,7 +40,7 @@ exports.conf = {
 
 exports.help = {
   name: 'rps',
-  description: 'Play Rock/Paper/Scissor with bot.,
+  description: 'Play Rock/Paper/Scissor with bot.',
   usage: 'rps [your choice]',
   module: 'Fun',
   permit: ' ',
