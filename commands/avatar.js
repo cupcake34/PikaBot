@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
     .setColor(0x00FF00)
     .addField("Username", mention.tag)
     .addField("Avatar URL", mention.avatarURL)
-    .setImage(mention.avatarURL);
+    .setThumbnail(mention.avatarURL);
   message.channel.send({embed});
 };
 
