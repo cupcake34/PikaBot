@@ -26,6 +26,7 @@ exports.run = (client, message, args) => {
   result = loss;
   }else {
   result = "... nothing idiot :angry: ${args[0]} is not a thing in Rock/Paper/Scissors!!!";
+  }
   const embed = new Discord.RichEmbed()
     .setColor([3447003, 4447003, 9447003][random])
     .setDescription(`I picked ${mychoice}. And your choice was ${args[0]} :thinking:\nSo ${result}!`);
