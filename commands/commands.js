@@ -16,8 +16,8 @@ exports.run = (client, message, args) => {
   if (args[0].toLowerCase() === "fun") {
   message.channel.send(`**List Of Commands in Fun Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Fun").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
-  if (args[0].toLowerCase() === "other") {
-  message.channel.send(`**List Of Commands in Other Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Other").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
+  if (args[0].toLowerCase() === "utility") {
+  message.channel.send(`**List Of Commands in Utility Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Other").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
   if (args[0].toLowerCase() === "pokemon") {
   message.channel.send(`**List Of Commands in Pokemon Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Pokemon").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
