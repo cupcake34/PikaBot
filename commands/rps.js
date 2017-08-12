@@ -3,7 +3,7 @@ const config = require("../config.json");
 
 exports.run = (client, message, args) => {
   const rps = ["Rock", "Paper", "Scissor"]
-  var random = Math.floor(Math.random()*answer.length);
+  var random = Math.floor(Math.random()*rps.length);
   const choice = args[0].toLowerCase();
   const mychoice = rps[random];
   const draw = "it's a draw";
@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
   result = loss;
   }
   const embed = new Discord.RichEmbed()
-    .setColor([3447003, 4447003][random])
+    .setColor([3447003, 4447003, 5447003][random])
     .setDescription(`I picked ${mychoice}. And your choice was ${args[0]} :thinking:\nSo ${result}!`);
   return message.channel.send({embed});
 };
