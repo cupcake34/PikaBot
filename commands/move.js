@@ -1,8 +1,8 @@
 const moves = require("../data/moves.js").BattleMovedex;
 
-exports.action = (client, message, args) => {
-    var moveName = args.toLowerCase();
-    var move = moves[moveName];
+exports.run = (client, message, args) => {
+    let moveName = args[0].toLowerCase();
+    let move = moves[moveName];
     if (!move) {
         for (var i = 0; i < Object.keys(moves).length; i++) {
             if (moves[Object.keys(moves)[i]].num == moveName) {
