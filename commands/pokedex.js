@@ -2,7 +2,7 @@ const dex = require("../data/pokedex.js").BattlePokedex;
 const dexEntries = require("../data/flavorText.json");
 const abilities = require("../data/abilities.js").BattleAbilities;
 
-var embedColours = {
+const embedColours = {
     Red: 16724530,
     Blue: 2456831,
     Yellow: 16773977,
@@ -17,7 +17,7 @@ var embedColours = {
 
 
 exports.run = (client, message, args) => {
-    var poke = args.toLowerCase();
+    let poke = args[0].toLowerCase();
     if (poke.split(" ")[0] == "mega") {
         poke = poke.substring(poke.split(" ")[0].length + 1) + "mega";
     }
