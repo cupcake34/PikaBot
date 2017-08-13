@@ -3,7 +3,7 @@ const items = require("../data/items.js").BattleItems;
 exports.run = (client, message, args) => {
     var item;
     for (var i = 0; i < Object.keys(items).length; i++) {
-        if (items[Object.keys(items)[i]].id.toLowerCase() == args.toLowerCase().replace(" ", "").replace("'", "")) {
+        if (items[Object.keys(items)[i]].id.toLowerCase() == args[0].toLowerCase().replace(" ", "").replace("'", "")) {
             item = items[Object.keys(items)[i]];
             break;
         }
