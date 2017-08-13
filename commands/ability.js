@@ -2,19 +2,19 @@ const abilities = require("../data/abilities.js").BattleAbilities;
 
 exports.run = (client, message, args) => {
     for (var i = 0; i < Object.keys(abilities).length; i++) {
-        if (abilities[Object.keys(abilities)[i]].name.toLowerCase() == args.toLowerCase()) {
-            var ability = abilities[Object.keys(abilities)[i]];
+        if (abilities[Object.keys(abilities)[i]].name.toLowerCase() == args[0].toLowerCase()) {
+            let ability = abilities[Object.keys(abilities)[i]];
             break;
         }
     }
-    var abilityDesc = ability.desc;
+    let abilityDesc = ability.desc;
     if (!abilityDesc) {
         abilityDesc = ability.shortDesc;
     }
     if (ability) {
-        message.channel.send("\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\n\n**" + capitalizeFirstLetter(ability.name) + "**", {
-            embed: {
+        message.channel.send({embed: {
                 color: 35071,
+                title: capitalizeFirstLetter(ability.name),
                 fields: [{
                         name: "Description",
                         value: abilityDesc
