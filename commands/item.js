@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
     if (item) {
         message.channel.send("\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\n\n**" + capitalizeFirstLetter(item.name) + "**", {
             embed: {
-                color: 35071,
+                color: 3447003,
                 fields: [{
                         name: "Description",
                         value: item.desc
