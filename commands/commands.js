@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
   if (args[0].toLowerCase() === "pokemon") {
   message.channel.send(`**List Of Commands in Pokemon Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Pokemon").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
-  if (args[0].toLowerCase() === "pokemon") {
+  if (args[0].toLowerCase() === "pokedex") {
   message.channel.send(`**List Of Commands in Pokedex Module**\n\`\`\`${client.commands.filter(c=>c.help.module === "Pokedex").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``);
   }else
   if (args[0].toLowerCase() === "help") {
