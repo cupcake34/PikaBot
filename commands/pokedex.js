@@ -97,6 +97,7 @@ exports.run = (client, message, args) => {
         }
 
         var dexEmbed = {
+            title: capitalizeFirstLetter(poke),
             color: embedColours[pokeEntry.color],
             fields: [{
                     name: typestring,
@@ -151,9 +152,7 @@ exports.run = (client, message, args) => {
             }
         };
 
-        message.channel.send("\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\n\n**" + capitalizeFirstLetter(poke) + "**", {
-            embed: dexEmbed
-        });
+        message.channel.send({embed: dexEmbed});
     } else {
         message.channel.send("⚠ Dex entry not found! Maybe you misspelt the Pokémon's name?");
     }
