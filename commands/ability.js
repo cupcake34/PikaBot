@@ -4,7 +4,6 @@ exports.run = (client, message, args) => {
     /*for (var i = 0; i < Object.keys(abilities).length; i++) {}*/
         if (abilities[Object.keys(abilities)[i]].name.toLowerCase() == args[0].toLowerCase()) {
             let ability = abilities[Object.keys(abilities)[i]];
-            break;
         }
     let abilityDesc = ability.desc;
     if (!abilityDesc) {
