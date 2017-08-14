@@ -1,6 +1,7 @@
 const typeMatchups = require("../data/typechart.js").BattleTypeChart;
 
 exports.run = (client, message, args) => {
+    return message.reply("Sorry but this command is not completed yet.");
     var defMulti = {
         "Bug": 1,
         "Dark": 1,
