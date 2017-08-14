@@ -52,6 +52,7 @@ exports.run = (client, message, args) => {
             crystalString = "None";
         }
         var embedObject = {
+            title: capitalizeFirstLetter(move.name),
             color: 35071,
             fields: [{
                     name: "Description",
@@ -80,11 +81,6 @@ exports.run = (client, message, args) => {
                 {
                     name: "Accuracy",
                     value: accuracyString,
-                    inline: true
-                },
-                {
-                    name: "Viable?",
-                    value: viableString,
                     inline: true
                 },
                 {
