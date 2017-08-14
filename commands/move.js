@@ -103,7 +103,7 @@ exports.run = (client, message, args) => {
                 text: "#" + move.num
             }
         };
-        message.channel.send("\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\n\n**" + capitalizeFirstLetter(move.name) + "**", { embed: embedObject });
+        message.channel.send({embed: embedObject});
         console.log(embedObject);
     }
 }
