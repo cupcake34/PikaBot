@@ -1,9 +1,9 @@
 const abilities = require("../data/abilities.js").BattleAbilities;
 
 exports.run = (client, message, args) => {
+    let ability = abilities[Object.keys(abilities)[i]];
     for (var i = 0; i < Object.keys(abilities).length; i++) {
         if (abilities[Object.keys(abilities)[i]].name.toLowerCase() == args[0].toLowerCase()) {
-            let ability = abilities[Object.keys(abilities)[i]];
             break;
         }
     }
