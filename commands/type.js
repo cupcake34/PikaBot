@@ -1,6 +1,6 @@
 const typeMatchups = require("../data/typechart.js").BattleTypeChart;
 
-exports.action = (message, args) => {
+exports.run = (client, message, args) => {
     var defMulti = {
         "Bug": 1,
         "Dark": 1,
