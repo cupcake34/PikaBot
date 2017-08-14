@@ -1,7 +1,8 @@
 const items = require("../data/items.js").BattleItems;
+const Discord = require("discord.js");
 
 exports.run = (client, message, args) => {
-    var item;
+    let item = args[0];
     for (var i = 0; i < Object.keys(items).length; i++) {
         if (items[Object.keys(items)[i]].id.toLowerCase() == args[0].toLowerCase().replace(" ", "").replace("'", "")) {
             item = items[Object.keys(items)[i]];
@@ -9,8 +10,6 @@ exports.run = (client, message, args) => {
         }
     }
     if (item) {
-        /* new code */
-const Discord = require("discord.js");
 const embed = new Discord.RichEmbed()
   .setAuthor(capitalizeFirstLetter(item.name), "https://raw.githubusercontent.com/110Percent/beheeyem-data/master/sprites/items/" + item.name.toLowerCase().replace(" ", "-") + ".png")
   .setThumbnail("https://raw.githubusercontent.com/110Percent/beheeyem-data/master/sprites/items/" + item.name.toLowerCase().replace(" ", "-") + ".png")
