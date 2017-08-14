@@ -2,6 +2,7 @@ const items = require("../data/items.js").BattleItems;
 const Discord = require("discord.js");
 
 exports.run = (client, message, args) => {
+    return message.reply("Sorry but this command is not completed yet.");
     let item = args[0];
     for (var i = 0; i < Object.keys(items).length; i++) {
         if (items[Object.keys(items)[i]].id.toLowerCase() == args[0].toLowerCase().replace(" ", "").replace("'", "")) {
