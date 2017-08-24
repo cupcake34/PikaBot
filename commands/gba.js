@@ -1,6 +1,7 @@
 exports.run = (client, message, args) => {
-const pkmn = message.content.split(" ").slice(1).join(" ");
-message.channel.send({files: {`https://raw.githubusercontent.com/Touched/pokedex-data/master/data/${pkmn}/sprite.png`, `https://raw.githubusercontent.com/Touched/pokedex-data/master/data/${pkmn}/icon.png`}});
+const pkmn = message.content.toLowerCase().split(" ").slice(1).join(" ");
+message.channel.send({file: `https://raw.githubusercontent.com/Touched/pokedex-data/master/data/${pkmn}/sprite.png`});
+message.channel.send({file: `https://raw.githubusercontent.com/Touched/pokedex-data/master/data/${pkmn}/icon.png`});
 }
 
 exports.conf = {
