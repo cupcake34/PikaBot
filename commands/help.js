@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     message.author.send(`**Command List**\n\n\`\`\`\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}\n\`\`\``);
     message.author.send({embed: {
       color:4447003,
-      description:`Use ${settings.prefix}help <commandname> for details on a specific command.`}});
+      description:`Type ${settings.prefix}help <commandname> for details on a specific command.\nType ${settings.prefix}modules for a list of modules.`}});
     message.reply("Check your Direct Message!");
     /* new code ends here */
   } else {
