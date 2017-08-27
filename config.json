@@ -6,4 +6,5 @@
 
 "status": "idle",
 "game": "+help | Pokemon Flame Yellow",
-"streaming": true}
+"streaming": false,
+"streamingurl": ""}
