@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const settings = require('../config.json');
+const config = require('../config.json');
 exports.run = (client, message, args) => {
   if (!args[0]) {
     const commandNames = Array.from(client.commands.keys());
