@@ -6,7 +6,16 @@ exports.run = (client, message, args) => {
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
     
     /* new code starts here, delete this part if not works, replace with original if not works */
-    message.author.send(`**Command List**\n\n\`\`\`\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}\n\`\`\``);
+    const embed = new Discord.RichEmbed()
+      .setAuthor("List Of Modules & there Commands", client.user.avatarURL)
+      .addField("Admin", `\`\`\`${client.commands.filter(c=>c.help.module === "Admin").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``)
+      .addField("Fun", `\`\`\`${client.commands.filter(c=>c.help.module === "Fun").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``)
+      .addField("Help", `\`\`\`${client.commands.filter(c=>c.help.module === "Help").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``)
+      .addField("Utility", `\`\`\`${client.commands.filter(c=>c.help.module === "Utility").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``)
+      .addField("Pokemon", `\`\`\`${client.commands.filter(c=>c.help.module === "Pokemon").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``)
+      .addField("Pokedex", `\`\`\`${client.commands.filter(c=>c.help.module === "Pokedex").map(cmd=>`${config.prefix}${cmd.help.name}${' '.repeat(longest - cmd.help.name.length)} :: ${cmd.help.description}`).join("\n")}\n\`\`\``)
+      .setColor(3447003)
+    message.author.send({embed});
     message.author.send({embed: {
       color:4447003,
       description:`Type ${settings.prefix}help <commandname> for details on a specific command.\nType ${settings.prefix}modules for a list of modules.`}});
