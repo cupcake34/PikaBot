@@ -39,6 +39,14 @@ fs.readdir('./modules/', (err, modules) => {
   });
 });
 
+fs.readdir('./events/', (err, events) => {
+  if (err) console.error(err); 
+  log(`Loading a total of ${events.length} events.`);
+  events.forEach(e => {
+    let loadData = require(`./events/${e}`);
+  });
+});
+
 client.reload = command => { 
   return new Promise((resolve, reject) => {
     try { 
