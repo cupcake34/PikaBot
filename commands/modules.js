@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
     .setTitle("List Of Modules")
     .setColor(4447003)
     .setDescription(client.modules.map(m => `• ${m.moduledata.name}`).join("\n"))
-    .setFooter(`:information_source:️Type \`${config.prefix}cmds <ModuleName>\` to get a list of commands in that module.`);
+    .setFooter(`:information_source:️ Type \`${config.prefix}cmds <ModuleName>\` to get a list of commands in that module.`);
   message.channel.send({embed});
 };
 
