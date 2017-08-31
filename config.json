@@ -1,6 +1,6 @@
 {
 
-"token": "process.env.TOKEN",
+"token": "TOKEN",
 
 "prefix": "*",
 "botOwner": "261792945483546625",
