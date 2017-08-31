@@ -1,0 +1,13 @@
+{
+
+"token": "process.env.TOKEN",
+
+"prefix": "*",
+"botOwner": "261792945483546625",
+
+"status": "idle",
+"game": "+help for help",
+"streaming": true,
+"streamingurl": "Pika pi use *help",
+
+"serverinvite": "https://discord.gg/2gpQXbF"}
