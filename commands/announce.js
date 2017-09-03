@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
 if(message.author.id !== config.botOwner) return message.reply('you are not my owner!!!'); 
 let announcemsg = message.content.split(" ").slice(1).join(' ');
 client.guilds.forEach(guild => {
-guild.defaultChannel.send({embed: {
+guild.const channel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES")).send({embed: {
 color:3447003,
 title:`Announcement Message from Bot Owner ${message.author.tag}!`,
 description:announcemsg
