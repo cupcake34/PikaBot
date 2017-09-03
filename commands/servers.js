@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setTitle("List Of Servers")
     .setColor(3447003)
-    .setDescription(client.guilds.map(g => `${g.name} | ${g.id}`).join('/n'); 
+   .setDescription(client.guilds.map(g => `${g.name} | ${g.id}`).join('/n'));
   message.channel.send({embed});
 };
 
