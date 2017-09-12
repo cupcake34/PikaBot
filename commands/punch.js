@@ -1,11 +1,19 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message, args)=> {
+  const config = require('../config.json'); 
   if (!args[0]) return message.reply("mention someone to use this command.");
   const bot = `<@${client.user.id}>`;
   const mention = `<@${message.mentions.users.first().id}>`;
   const author = `<@${message.author.id}>`;
-  if (author === mention) return message.reply("You can't punch yourself.");
-  if (mention === bot) return message.reply("You can't punch me :stuck_out_tongue_winking_eye:");
-  return message.channel.send(`_${author} punched ${mention}!_`);
+  const owner =  `<@${message.botowner.id}>`;
+  if (owner === mention) return message.reply(`don't punch my owner`, {
+    file: "http://i.imgur.com/coxlGCK.gif" // Or replace with FileOptions object
+});
+  if (mention === bot) return message.reply(`don't punch me 😭`, {
+    file: "https://media.giphy.com/media/dICjAqixKQFnG/giphy.gif" // Or replace with FileOptions object
+});
+  return message.channel.send(`_${author} punched ${mention}!_`, {
+    file: "https://i.makeagif.com/media/8-22-2015/nbEwdI.gif" // Or replace with FileOptions object
+});
 };
 
 exports.conf = {
