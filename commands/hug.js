@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
   
   if (author === mention) return message.reply("Alone",{file: [`https://media.tenor.com/images/f32c20bad2f5dfa59113ac0bfdfc26b1/tenor.gif`]});
  
-  return message.channel.sendmessage({
+  return message.channel.send({
                          "embed": { 
                            title: '_${author} slapped ${mention}!_',
                                    
