@@ -8,8 +8,8 @@ const config = require("./config.json");
 require("./util/eventLoader.js")(client);
 
 client.login(process.env.TOKEN);
-bot.on('ready', () => {
-  bot.user.setGame('*help for help')
+client.on('ready', () => {
+  client.user.setGame('*help for help');
 })
 const log = message => {
 console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
