@@ -9,7 +9,7 @@ require("./util/eventLoader.js")(client);
 
 client.login(process.env.TOKEN);
 client.on('ready', () => {
-  client.user.setGame('*help for help');
+  client.user.setGame("*help for help");
 })
 const log = message => {
 console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
