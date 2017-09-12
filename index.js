@@ -8,7 +8,7 @@ const config = require("./config.json");
 require("./util/eventLoader.js")(client);
 
 client.login(process.env.TOKEN);
-
+client.user.setGame("*help for help or dm me");
 const log = message => {
 console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 }; 
