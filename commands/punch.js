@@ -8,6 +8,9 @@ exports.run = (client, message, args)=> {
   if (owner === mention) return message.reply(`don't punch my owner 😬`, {
     file: "http://i.imgur.com/coxlGCK.gif" // Or replace with FileOptions object
 });
+  if (author === mention) return message.reply(`don't punch my yourself, let me practice!`, {
+    file: "https://media.tenor.com/images/69fac3d7f1abfbd74bbd2f395cb53702/tenor.gif" // Or replace with FileOptions object
+});
   if (mention === bot) return message.reply(`don't punch me 😭`, {
     file: "https://media.giphy.com/media/dICjAqixKQFnG/giphy.gif" // Or replace with FileOptions object
 });
