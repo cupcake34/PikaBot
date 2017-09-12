@@ -10,7 +10,11 @@ exports.run = (client, message, args) => {
   return  message.channel.send({embed: {
     color: 3447003,
     title: "hugs",
-    desciption: "_${author} hugs ${mention}!_",
+    desciption: "${author} hugs ${mention}!"
+    fields: [{
+        name: "hug",
+        value: "${author} hugs ${mention}!"
+      },
     "image": {
                 "url": "https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif",}
        
