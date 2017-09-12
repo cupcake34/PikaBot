@@ -9,8 +9,11 @@ require("./util/eventLoader.js")(client);
 
 client.login(process.env.TOKEN);
 client.on('ready', () => {
+  console.log(`Ready to server in${client.channels.size} channels on ${client.guilds.size} servers, for a total of ${client.users.size} users.`);
   client.user.setGame("*help for help");
-})
+  client.user.setStatus('idle');										    
+});
+
 const log = message => {
 console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 }; 
