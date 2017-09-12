@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   const author = `<@${message.author.id}>`;
   if (author === mention) return message.reply({file: `https://media.tenor.com/images/f32c20bad2f5dfa59113ac0bfdfc26b1/tenor.gif`});
   if (mention === bot) return message.reply("You can't slap me :stuck_out_tongue_winking_eye:");
-  return message.channel.send(`_${author} Hugs ${mention}!_`)({file: `https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif`});
+  return message.channel.send({file: `https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif`});
 };
 
 exports.conf = {
