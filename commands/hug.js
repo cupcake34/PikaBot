@@ -17,7 +17,7 @@ exports.conf = {
 
 exports.help = {
   name: 'hug',
-  description: 'Slaps someone for fun.',
+  description: 'hug someone 💑',
   usage: 'hug [mention]',
   module: 'Fun',
   permit: ' ',
