@@ -6,7 +6,13 @@ exports.run = (client, message, args) => {
   
   if (author === mention) return message.reply("Alone",{file: [`https://media.tenor.com/images/f32c20bad2f5dfa59113ac0bfdfc26b1/tenor.gif`]});
  
-  return message.channel.send({file: `https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif`});
+  return message.channel.sendmessage({
+                         "embed": { 
+                           title: '_${author} slapped ${mention}!_',
+                                   
+         "image" : { "url" : "https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif"}
+            }
+        });
 };
 
 exports.conf = {
