@@ -5,7 +5,9 @@ exports.run = (client, message, args) => {
   const author = `<@${message.author.id}>`;
   
   
-  if (author === mention) return message.reply("Alone",{file: [`https://media.tenor.com/images/f32c20bad2f5dfa59113ac0bfdfc26b1/tenor.gif`]});
+  if (author === mention) return message.reply(`Alone :C don't be sad  i will hug you`, {
+    file: "https://media.tenor.com/images/f32c20bad2f5dfa59113ac0bfdfc26b1/tenor.gif" // Or replace with FileOptions object
+});
  
   return  message.channel.sendMessage(`_${author} hugged ${mention}!_`, {
     file: "https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif" // Or replace with FileOptions object
