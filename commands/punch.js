@@ -4,7 +4,7 @@ exports.run = (client, message, args)=> {
   const bot = `<@${client.user.id}>`;
   const mention = `<@${message.mentions.users.first().id}>`;
   const author = `<@${message.author.id}>`;
-  const owner =  `<@${message.botowner.id}>`;
+  const owner =  `<@${message.botowner}>`;
   if (owner === mention) return message.reply(`don't punch my owner`, {
     file: "http://i.imgur.com/coxlGCK.gif" // Or replace with FileOptions object
 });
