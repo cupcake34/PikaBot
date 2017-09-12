@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
   
   if (author === mention) return message.reply("Alone",{file: [`https://media.tenor.com/images/f32c20bad2f5dfa59113ac0bfdfc26b1/tenor.gif`]});
  
-  return  message.channel.sendmessage.channel.sendMessage(`_${author} punched ${mention}!_`, {
+  return  message.channel.sendMessage(`_${author} hugged ${mention}!_`, {
     file: "https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif" // Or replace with FileOptions object
 });
     
