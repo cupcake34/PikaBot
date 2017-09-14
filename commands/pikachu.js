@@ -6,7 +6,7 @@ const pikachu = [
 'https://tse1.mm.bing.net/th?id=OIP.oSBx19na-Xq2kZnad9Y5GwHgFs&pid=15.1&P=0&w=225&h=172',
  'https://sp.yimg.com/ib/th?id=OIP.t3OOCktNFRVnfnTxnxSCGQEeDa&pid=15.1&rs=1&c=1&qlt=95&w=145&h=111',
 ];
-message.channel.send(pikachu[Math.floor(Math.random() * pikachu.length);
+message.channel.send(pikachu[Math.floor(Math.random() * pikachu.length)
 }
 };
 
