@@ -7,7 +7,7 @@ const pikachu = [
  'https://sp.yimg.com/ib/th?id=OIP.t3OOCktNFRVnfnTxnxSCGQEeDa&pid=15.1&rs=1&c=1&qlt=95&w=145&h=111',
 ];
 message.channel.send(pikachu[Math.floor(Math.random() * pikachu.length)
-}
+
 };
 
 exports.conf = {
