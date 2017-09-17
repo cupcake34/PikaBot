@@ -13,6 +13,14 @@ client.on('ready', () => {
   client.user.setGame("*help for help");
   client.user.setStatus('idle');										    
 });
+client.on("guildCreate", (guild) => {
+
+  guild.defaultChannel.send({embed: {
+      color:3447003,
+      title:`thanks for inviting me in this server if you need more help & info about me join here https://discord.gg/NwZwxtf`,
+      
+    }});
+  });   
 
 const log = message => {
 console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
