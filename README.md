@@ -2,11 +2,11 @@
 
 *A Discord Bot written in Discord.Js for Fun, Admin, Misc and Pokemon related commands.*
 
-*Devloped by **@Aryan 10#7484***
+*Devloped by **@Arun Kapil#2297***
 
-[Github Repo](https://github.com/Aryan10/PikaBot)
 
-[Bot Invite](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=318700956244115457)
+
+[Bot Invite](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=358785023286968323)
 
 ## Hosting
 
