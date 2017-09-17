@@ -14,10 +14,10 @@ client.on('ready', () => {
   client.user.setStatus('idle');										    
 });
 client.on("guildCreate", (guild) => {
-
+ if (guild.defaultChannel === undefined) return
   guild.defaultChannel.send({embed: {
       color:3447003,
-      title:`thanks for inviting me in this server if you need more help & info about me join here https://discord.gg/NwZwxtf`,
+      description: `thanks for inviting me in this server if you need more help & info about me join here https://discord.gg/NwZwxtf`,
       
     }});
   });   
