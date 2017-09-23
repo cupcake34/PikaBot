@@ -20,7 +20,9 @@ client.on("guildCreate", (guild) => {
       description: `thanks for inviting me in this server if you need more help & info about me join here https://discord.gg/NwZwxtf`,
       
     }});
-  });   
+  }); 
+let interval = setInterval(()=>clients.channels.get('290162830009696257').send("Hey, I am getting bored.\nAnyone online?"),900);
+let limit = setInterval(()=>lollimit=1 ,2000);
 
 const log = message => {
 console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
