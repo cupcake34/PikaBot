@@ -1,5 +1,3 @@
-
-
 module.exports = member => {
 
   var nummsg = Math.floor((Math.random() * 22) + 1);
